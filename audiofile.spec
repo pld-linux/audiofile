@@ -2,8 +2,8 @@ Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
 Version:	0.1.9
-Release:	3
-Copyright:	GPL
+Release:	4
+License:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
 Source:		ftp://ftp.gnome.org/pub/GNOME/sources/audiofile/%{name}-%{version}.tar.gz
@@ -12,25 +12,25 @@ BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	libaudiofile
 
 %description
-This Audio File Library is an implementation of the SGI Audio File library. 
-Since the latter is specified ambiguously in places, I've taken some
+This Audio File Library is an implementation of the SGI Audio File library.
+ Since the latter is specified ambiguously in places, I've taken some
 liberties in interpreting certain such ambiguities. At the present, not all
 features of the SGI Audio File library are implemented. I feel, though,
 that this implementation of the Audio File Library offers enough
-functionality to be useful for general tasks.
-
-This library allows the processing of audio data to and from audio files of
-many common formats (currently AIFF, AIFC, WAVE, and NeXT/Sun).
+functionality to be useful for general tasks. This library allows the
+processing of audio data to and from audio files of many common formats
+(currently AIFF, AIFC, WAVE, and NeXT/Sun).
 
 %description -l pl
-Biblioteka Audio File jest implementacj± biblioteki SGI Audio File.
-Przy jej pomocy mo¿na przetwarzaæ d¼wiêki w ró¿nych formatach (AIFF, AIFC,
-WAVE i NeXT/Sun).
+Biblioteka Audio File jest implementacj± biblioteki SGI Audio File. Przy
+jej pomocy mo¿na przetwarzaæ d¼wiêki w ró¿nych formatach (AIFF, AIFC, WAVE
+i NeXT/Sun).
 
 %package devel
 Summary:	Header files and others to develop Audio File applications
 Summary(pl):	Pliki nag³ówkowe i inne potrzebe do Audio File
 Group:		Development/Libraries
+Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
 Obsoletes:	libaudiofile-devel
@@ -46,6 +46,7 @@ aplikacji pod Audio File'm.
 Summary:	Static libaudiofile libraries
 Summary(pl):	Biblioteka statyczne libaudiofile
 Group:		Development/Libraries
+Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
 Obsoletes:	libaudiofile-static
