@@ -2,7 +2,7 @@ Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
 Version:	0.1.6
-Release:	1
+Release:	2
 Copyright:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
@@ -10,7 +10,6 @@ Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.gz
 URL:		http://www.68k.org./~michael/audiofile/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	libaudiofile
-Conflicts:	glibc <= 2.0.7
 
 %description
 This Audio File Library is an implementation of the SGI Audio File library. 
@@ -103,6 +102,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(644,root,root) /usr/lib/lib*.a
 
 %changelog
+* Wed Apr 21 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [0.1.6-2]
+- removed "Conflicts: glibc <= 2.0.7" (not neccessary now),
+- recompiled on rpm 3.
+
 * Wed Mar 10 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [0.1.6-1]
 - back to old name .. audiofile.
