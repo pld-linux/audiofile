@@ -85,14 +85,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {NOTES,README,TODO}.gz
 
-%attr(755,root,root) /usr/bin/sfconvert
-%attr(755,root,root) /usr/bin/sfinfo
+%attr(755,root,root) %{_bindir}/sfconvert
+%attr(755,root,root) %{_bindir}/sfinfo
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
 
-%attr(755,root,root) /usr/bin/audiofile-config
+%attr(755,root,root) %{_bindir}/audiofile-config
 %attr(755,root,root) %{_libdir}/lib*.so
 
 /usr/include/*
