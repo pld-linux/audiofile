@@ -15,6 +15,7 @@ License:	LGPL
 Group:		Libraries
 #Source0:	ftp://oss.sgi.com/projects/audiofile/download/%{name}-%{version}.tar.gz
 Source0:	%{name}-%{version}.%{snap}.tar.bz2
+# Source0-md5: eb83db508061a9d6c22984de3d4be5d3
 URL:		http://oss.sgi.com/projects/audiofile/
 BuildRequires:	autoconf
 BuildRequires:	automake
