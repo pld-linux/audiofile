@@ -4,7 +4,7 @@ Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Summary(pt_BR):	Biblioteca para manipular vários formatos de arquivos de áudio
 Name:		audiofile
 Version:	0.2.3
-Release:	2
+Release:	3
 Epoch:		1
 License:	LGPL
 Group:		Libraries
@@ -20,6 +20,7 @@ URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
@@ -150,7 +151,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	m4datadir=%{_aclocaldir}
+	m4datadir=%{_aclocaldir} \
+	pkgconfig=%{_pkgconfigdir}
 
 gzip -9nf NOTES README TODO
 
@@ -179,6 +181,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_includedir}/*
 %{_aclocaldir}/audiofile.m4
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)
