@@ -5,13 +5,13 @@ Summary(pt_BR):	Biblioteca para manipular vАrios formatos de arquivos de Аudio
 Summary(ru):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
-Version:	0.2.4
-Release:	2
+Version:	0.2.5
+Release:	1
 Epoch:		1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.68k.org/~michael/audiofile/%{name}-%{version}.tar.gz
-# Source0-md5:	d6b88d8f3d14da00cb2a11be8ea9140b
+# Source0-md5:	fd07c62a17ceafa317929e55e51e26c5
 Patch0:		%{name}-am18.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	automake
