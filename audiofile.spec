@@ -59,8 +59,9 @@ Este software não está completo e ainda está em desenvolvimento.
 Muitos formatos funcionam bem, outros ainda não.
 
 %package progs
-Summary:	Audiofile programs 
+Summary:	Audiofile programs
 Summary(es):	Audiofile programs
+Summary(pl):	Programy audiofile
 Summary(pt_BR):	Programas que acompanham a biblioteca audiofile
 Group:		Applications/Sound
 Group(de):	Applikationen/Laut
@@ -69,10 +70,13 @@ Group(pl):	Aplikacje/D¼wiêk
 %description progs
 audiofile applications.
 
-%description -l es progs
+%description progs -l es
 Audiofile programs.
 
-%description -l pt_BR progs
+%description progs -l pl
+Programy audiofile.
+
+%description progs -l pt_BR
 Programas que acompanham a audiofile.
 
 %package devel
@@ -95,15 +99,15 @@ Obsoletes:	libaudiofile0-devel
 %description devel
 Header files and others to develop Audio File applications.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówków do Audio File'a, czyli to czego potrzebujesz do
 tworzenia aplikacji pod Audio File'm.
 
-%description -l es devel
+%description devel -l es
 Bibliotecas, archivos de inclusión y otros archivos para el desarrollo
 de aplicaciones audiofile.
 
-%description -l pt_BR devel
+%description devel -l pt_BR
 Bibliotecas, arquivos de inclusão e outros arquivos para desenvolver
 aplicativos audiofile.
 
@@ -126,13 +130,13 @@ Obsoletes:	libaudiofile-static
 %description static
 Static libaudiofile libraries.
 
-%description -l es static
+%description static -l es
 Static libraries for audiofile development
 
-%description -l pl static
+%description static -l pl
 Biblioteki statyczne libaudiofile.
 
-%description -l pt_BR static
+%description static -l pt_BR
 Bibliotecas estáticas para desenvolvimento com audiofile
 
 %prep
@@ -156,7 +160,7 @@ rm -rf $RPM_BUILD_ROOT
 
 gzip -9nf NOTES README TODO
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %clean
