@@ -2,9 +2,11 @@ Summary:	Audio File Library - SGI Audio File Library
 Summary(es):	Biblioteca para manipulaciСn de varios archivos de sonido
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Summary(pt_BR):	Biblioteca para manipular vАrios formatos de arquivos de Аudio
+Summary(ru):	Библиотека работы с разными форматами аудио-файлов
+Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
 Version:	0.2.3
-Release:	3
+Release:	4
 Epoch:		1
 License:	LGPL
 Group:		Libraries
@@ -51,6 +53,14 @@ vАrios formatos comuns (atualmente AIFF, AIFC, WAVE e NeXT/Sun).
 Este software nЦo estА completo e ainda estА em desenvolvimento.
 Muitos formatos funcionam bem, outros ainda nЦo.
 
+%description -l ru
+Библиотека работы с разными форматами фудио-файлов. Используется
+демоном esound.
+
+%description -l uk
+Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в. Використову╓ться
+демоном esound.
+
 %package progs
 Summary:	Audiofile programs
 Summary(es):	Audiofile programs
@@ -75,6 +85,8 @@ Summary:	Header files and others to develop Audio File applications
 Summary(es):	Bibliotecas, archivos de inclusiСn y otros archivos para el desarrollo de aplicaciones audiofile
 Summary(pl):	Pliki nagЁСwkowe i inne potrzebe do Audio File
 Summary(pt_BR):	Bibliotecas, arquivos de inclusЦo e outros arquivos para desenvolver aplicativos audiofile
+Summary(ru):	Файлы для разработки приложений с использованием audiofile
+Summary(uk):	Файли для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 Obsoletes:	libaudiofile-devel
@@ -95,11 +107,20 @@ de aplicaciones audiofile.
 Bibliotecas, arquivos de inclusЦo e outros arquivos para desenvolver
 aplicativos audiofile.
 
+%description devel -l ru
+.h-файлы и пр. для разработки приложений с использованием audiofile.
+
+%description devel -l uk
+.h-файли та ╕нше для розробки прикладних програм з використанням
+audiofile.
+
 %package static
 Summary:	Static libaudiofile libraries
 Summary(es):	Static libraries for audiofile development
 Summary(pl):	Biblioteka statyczne libaudiofile
 Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com audiofile
+Summary(ru):	Статические библиотеки для разработки приложений с использованием audiofile
+Summary(uk):	Статичн╕ б╕бл╕отеки для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 Obsoletes:	libaudiofile-static
@@ -115,6 +136,14 @@ Biblioteki statyczne libaudiofile.
 
 %description static -l pt_BR
 Bibliotecas estАticas para desenvolvimento com audiofile
+
+%description static -l ru
+Статические библиотеки для разработки приложений с использованием
+audiofile.
+
+%description static -l uk
+Статичн╕ б╕бл╕отеки для розробки прикладних програм з використанням
+audiofile.
 
 %prep
 %setup -q
