@@ -1,13 +1,14 @@
 Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
-Version:	0.1.9
-Release:	5
+Version:	0.1.11
+Release:	1
 License:	GPL
 Group:		Applications/Sound
+Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
-Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/audiofile/%{name}-%{version}.tar.gz
-Patch0:		audiofile-automake_fix.patch
+Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
+Patch0:		%{name}-automake_fix.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BUildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,6 +34,7 @@ AIFC, WAVE i NeXT/Sun).
 Summary:	Header files and others to develop Audio File applications
 Summary(pl):	Pliki nag³ówkowe i inne potrzebe do Audio File
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name} = %{version}
@@ -49,6 +51,7 @@ tworzenia aplikacji pod Audio File'm.
 Summary:	Static libaudiofile libraries
 Summary(pl):	Biblioteka statyczne libaudiofile
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Requires:	%{name}-devel = %{version}
@@ -75,9 +78,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	m4datadir=%{_aclocaldir}
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
-strip $RPM_BUILD_ROOT%{_bindir}/{sfconvert,sfinfo}
 
 gzip -9nf NOTES README TODO
 
