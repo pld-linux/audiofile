@@ -63,7 +63,7 @@ Biblioteki statyczne libaudiofile.
 autoconf
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
-	--prefix=/usr
+	--prefix=%{_prefix}
 make
 
 %install
@@ -103,43 +103,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.a
 
 %changelog
-* Wed Apr 21 1999 Piotr Czerwi雟ki <pius@pld.org.pl>
-  [0.1.6-2]
-- removed "Conflicts: glibc <= 2.0.7" (not neccessary now),
-- recompiled on rpm 3.
-
-* Wed Mar 10 1999 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
-  [0.1.6-1]
-- back to old name .. audiofile.
-
-* Fri Feb 26 1999 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
-  [0.1.5-3]
-- added "Conflicts: glibc <= 2.0.7" for prevent install
-  with proper version glibc,
-- changed Group in devel and static.
-
-* Mon Jan 04 1999 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
-  [0.1.5-1d]
-- changed package name to libaudiofile (audiofile added to Obsoletes),
-- added striping shared libraries,
-- audiofile-config to devel,
-- enhanced main %description,
-- added static subpackage,
-- new %insatall and %build (libaudiofile have new autoconf scheme).
-
-* Sun Sep 27 1998 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
-  [0.1.3-2]
-- added -q %setup parameter,
-- changed Buildroot to /tmp/%%{name}-%%{version}-root,
-- added using %%{name} and %%{version} in Source,
-- changed install prefix from /usr/local to /usr.
-- changeded dependences to "Requires: %%{name} = %%{version}" in devel
-  subpackage,
-- added using $RPM_OPT_FLAGS during compile,
-- added full %attr description in %files,
-- simplifications in %install.
-
-* Tue Aug 11 1998 Wojtek 奸usarczyk <wojtek@shadow.eu.org>
-  [0.1.3-1]
-- first try at an RPM,
-- build against GNU libc-2.1.
+* Mon May 31 1999 Tomasz K這czko <kloczek@rudy.mif.pg.gda.pl>
+  [0.1.7-1]
+- based on RH spec,
+- spec rewrited by PLD team,
+- pl translation Wojtek 奸usarczyk <wojtek@shadow.eu.org>.
