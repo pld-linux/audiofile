@@ -9,7 +9,7 @@ Summary(ru):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
 Version:	0.2.3
-Release:	%{snap}.1
+Release:	5.%{snap}.1
 Epoch:		1
 License:	LGPL
 Group:		Libraries
