@@ -13,6 +13,7 @@ Group:		Libraries
 Source0:	http://www.68k.org/~michael/audiofile/%{name}-%{version}.tar.gz
 # Source0-md5:	d6b88d8f3d14da00cb2a11be8ea9140b
 URL:		http://www.68k.org/~michael/audiofile/
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
@@ -74,10 +75,10 @@ Programy audiofile.
 Programas que acompanham a audiofile.
 
 %package devel
-Summary:	Header files and others to develop Audio File applications
-Summary(es):	Bibliotecas, archivos de inclusiСn y otros archivos para el desarrollo de aplicaciones audiofile
+Summary:	Header and other files to develop Audio File applications
+Summary(es):	Archivos de inclusiСn y otros archivos para el desarrollo de aplicaciones audiofile
 Summary(pl):	Pliki nagЁСwkowe i inne potrzebe do Audio File
-Summary(pt_BR):	Bibliotecas, arquivos de inclusЦo e outros arquivos para desenvolver aplicativos audiofile
+Summary(pt_BR):	Arquivos de inclusЦo e outros arquivos para desenvolver aplicativos audiofile
 Summary(ru):	Файлы для разработки приложений с использованием audiofile
 Summary(uk):	Файли для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
@@ -86,19 +87,19 @@ Obsoletes:	libaudiofile-devel
 Obsoletes:	libaudiofile0-devel
 
 %description devel
-Header files and others to develop Audio File applications.
+Header and other files to develop Audio File applications.
 
 %description devel -l pl
-Pliki nagЁСwkСw do Audio File'a, czyli to czego potrzebujesz do
-tworzenia aplikacji pod Audio File'm.
+Pliki nagЁСwkowe biblioteki Audio File, czyli to, co jest potrzebne do
+tworzenia aplikacji korzystaj╠cych z tej biblioteki.
 
 %description devel -l es
-Bibliotecas, archivos de inclusiСn y otros archivos para el desarrollo
-de aplicaciones audiofile.
+Archivos de inclusiСn y otros archivos para el desarrollo de
+aplicaciones audiofile.
 
 %description devel -l pt_BR
-Bibliotecas, arquivos de inclusЦo e outros arquivos para desenvolver
-aplicativos audiofile.
+Arquivos de inclusЦo e outros arquivos para desenvolver aplicativos
+audiofile.
 
 %description devel -l ru
 .h-файлы и пр. для разработки приложений с использованием audiofile.
