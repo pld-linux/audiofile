@@ -1,12 +1,12 @@
 Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
-Version:	0.1.7
-Release:	3
+Version:	0.1.9
+Release:	2
 Copyright:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
-Source:		ftp://ftp.68k.org/pub/michael/%{name}-%{version}.tar.gz
+Source:		ftp://ftp.gnome.org/pub/GNOME/sources/audiofile/%{name}-%{version}.tar.gz
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	libaudiofile
@@ -53,7 +53,7 @@ Obsoletes:	libaudiofile-static
 %description static
 Static libaudiofile libraries.
 
-%description -l pl devel
+%description -l pl static
 Biblioteki statyczne libaudiofile.
 
 %prep
