@@ -1,7 +1,7 @@
 Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
-Version:	0.2.1
+Version:	0.2.2
 Release:	2
 Epoch:		1
 License:	LGPL
@@ -12,6 +12,9 @@ Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
 URL:		http://www.68k.org/~michael/audiofile/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
 
@@ -68,6 +71,10 @@ Biblioteki statyczne libaudiofile.
 %setup -q
 
 %build
+libtoolize --copy --force
+aclocal
+autoconf
+automake -a -c
 %configure
 %{__make}
 
