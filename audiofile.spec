@@ -67,7 +67,7 @@ Biblioteki statyczne libaudiofile.
 %build
 automake
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
