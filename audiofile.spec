@@ -95,7 +95,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/audiofile-config
 %attr(755,root,root) %{_libdir}/lib*.so
 
-/usr/include/*
+%{_includedir}/*
 %{_datadir}/aclocal/audiofile.m4
 
 %files static
