@@ -63,7 +63,6 @@ Biblioteki statyczne libaudiofile.
 
 %prep
 %setup -q
-%patch -p1
 
 %build
 %configure
