@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.so
 
 /usr/include/*
-/usr/share/aclocal/audiofile.m4
+%{_datadir}/aclocal/audiofile.m4
 
 %files static
 %defattr(644,root,root,755)
