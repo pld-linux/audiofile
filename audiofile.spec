@@ -55,7 +55,7 @@ Obsoletes:	libaudiofile-static
 Static libaudiofile libraries
 
 %description -l pl devel
-Biblioteka statyczne libaudiofile.
+Biblioteki statyczne libaudiofile.
 
 %prep
 %setup -q
@@ -74,7 +74,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 strip $RPM_BUILD_ROOT/usr/lib/lib*.so.*.*
 
-bzip2 -9 NOTES README TODO
+gzip -9nf NOTES README TODO
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
@@ -84,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NOTES.bz2 README.bz2 TODO.bz2
+%doc {NOTES,README,TODO}.gz
 
 %attr(755,root,root) /usr/bin/sfconvert
 %attr(755,root,root) /usr/bin/sfinfo
