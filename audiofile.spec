@@ -2,12 +2,13 @@ Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
 Version:	0.1.11
-Release:	2
+Release:	3
 Epoch:		1
-License:	GPL
-Group:		Applications/Sound
-Group(de):	Applikationen/Laut
-Group(pl):	Aplikacje/D¼wiêk
+License:	LGPL
+Group:		Libraries
+Group(de):	Libraries
+Group(fr):	Librairies
+Group(pl):	Biblioteki
 Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
