@@ -4,7 +4,7 @@ Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Summary(pt_BR):	Biblioteca para manipular vАrios formatos de arquivos de Аudio
 Name:		audiofile
 Version:	0.2.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL
 Group:		Libraries
@@ -22,6 +22,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
+Obsoletes:	libaudiofile0
 
 %description
 This Audio File Library is an implementation of the SGI Audio File
@@ -88,6 +89,7 @@ Group(ru):	Разработка/Библиотеки
 Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Obsoletes:	libaudiofile-devel
+Obsoletes:	libaudiofile0-devel
 
 %description devel
 Header files and others to develop Audio File applications.
