@@ -1,13 +1,12 @@
 Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
-Version:	0.1.6
-Release:	6	
+Version:	0.1.7
+Release:	1
 Copyright:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
 Source:		ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{name}-%{version}.tar.gz
-Patch:		audiofile-sparc-noswap.patch
 URL:		http://www.68k.org./~michael/audiofile/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	libaudiofile
@@ -59,13 +58,12 @@ Biblioteki statyczne libaudiofile.
 
 %prep
 %setup -q
-%patch 
 
 %build
+autoconf
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
 ./configure %{_target} \
 	--prefix=/usr
-
 make
 
 %install
