@@ -10,7 +10,8 @@ Release:	4
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.2/%{name}-%{version}.tar.bz2
+# Source0-md5:	8935c891eac4409503e7115d2c28f33a
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	autoconf
 BuildRequires:	automake
