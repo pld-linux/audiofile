@@ -1,0 +1,10 @@
+- added using CVS keywords in %changelog (for automating them).
+
+* %{date} PLD Team <pld-list@pld.org.pl>
+All below listed persons can be reached on <cvs_login>@pld.org.pl
+
+* Mon May 31 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [0.1.7-1]
+- based on RH spec,
+- spec rewrited by PLD team,
+- pl translation Wojtek ¦lusarczyk <wojtek@shadow.eu.org>.
