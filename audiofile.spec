@@ -13,9 +13,9 @@ Release:	5.%{snap}.1
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-#Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
+#Source0:	ftp://oss.sgi.com/projects/audiofile/download/%{name}-%{version}.tar.gz
 Source0:	%{name}-%{version}.%{snap}.tar.bz2
-URL:		http://www.68k.org/~michael/audiofile/
+URL:		http://oss.sgi.com/projects/audiofile/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -170,11 +170,11 @@ rm -rf $RPM_BUILD_ROOT
 	m4datadir=%{_aclocaldir} \
 	pkgconfig=%{_pkgconfigdir}
 
-%post	-p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
