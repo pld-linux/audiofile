@@ -10,8 +10,8 @@ Release:	1
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.68k.org/~michael/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	9c1049876cd51c0f1b12c2886cce4d42
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.2/%{name}-%{version}.tar.bz2
+# Source0-md5:	3d01302834660850b6141cac1e6f5501
 Patch0:		%{name}-am18.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	automake
