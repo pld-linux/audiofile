@@ -5,13 +5,13 @@ Summary(pt_BR):	Biblioteca para manipular vАrios formatos de arquivos de Аudio
 Summary(ru):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
-Version:	0.2.5
-Release:	2
+Version:	0.2.6
+Release:	1
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-Source0:	http://www.68k.org/~michael/audiofile/%{name}-%{version}.tar.gz
-# Source0-md5:	fd07c62a17ceafa317929e55e51e26c5
+Source0:	http://www.68k.org/~michael/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	9c1049876cd51c0f1b12c2886cce4d42
 Patch0:		%{name}-am18.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	automake
@@ -83,7 +83,7 @@ Summary(pt_BR):	Arquivos de inclusЦo e outros arquivos para desenvolver aplicati
 Summary(ru):	Файлы для разработки приложений с использованием audiofile
 Summary(uk):	Файли для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
-Requires:	%{name} = %{epoch}:%{version}
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libaudiofile-devel
 Obsoletes:	libaudiofile0-devel
 
@@ -116,7 +116,7 @@ Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com audiofile
 Summary(ru):	Статические библиотеки для разработки приложений с использованием audiofile
 Summary(uk):	Статичн╕ б╕бл╕отеки для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{epoch}:%{version}
+Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	libaudiofile-static
 
 %description static
