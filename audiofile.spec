@@ -6,7 +6,7 @@ Release:	4
 License:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
-Source:		ftp://ftp.gnome.org/pub/GNOME/sources/audiofile/%{name}-%{version}.tar.gz
+Source:		ftp://ftp.gnome.org/pub/GNOME/stable/sources/audiofile/%{name}-%{version}.tar.gz
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRoot:	/tmp/%{name}-%{version}-root
 Obsoletes:	libaudiofile
