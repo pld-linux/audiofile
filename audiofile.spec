@@ -6,12 +6,13 @@ Summary(ru):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
 Version:	0.2.4
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL
 Group:		Libraries
 Source0:	http://www.68k.org/~michael/audiofile/%{name}-%{version}.tar.gz
 # Source0-md5:	d6b88d8f3d14da00cb2a11be8ea9140b
+Patch0:		%{name}-am18.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -137,6 +138,7 @@ audiofile.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
