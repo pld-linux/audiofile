@@ -1,6 +1,3 @@
-
-%define		snap	20021108
-
 Summary:	Audio File Library - SGI Audio File Library
 Summary(es):	Biblioteca para manipulaciСn de varios archivos de sonido
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
@@ -8,19 +5,14 @@ Summary(pt_BR):	Biblioteca para manipular vАrios formatos de arquivos de Аudio
 Summary(ru):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
-Version:	0.2.3
-Release:	5.%{snap}.1
+Version:	0.2.4
+Release:	1
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-#Source0:	ftp://oss.sgi.com/projects/audiofile/download/%{name}-%{version}.tar.gz
-Source0:	%{name}-%{version}.%{snap}.tar.bz2
-# Source0-md5: eb83db508061a9d6c22984de3d4be5d3
-URL:		http://oss.sgi.com/projects/audiofile/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	libtool
-BuildRequires:	pkgconfig
+Source0:	http://www.68k.org/~michael/audiofile/%{name}-%{version}.tar.gz
+# Source0-md5:	d6b88d8f3d14da00cb2a11be8ea9140b
+URL:		http://www.68k.org/~michael/audiofile/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
@@ -68,16 +60,12 @@ Muitos formatos funcionam bem, outros ainda nЦo.
 
 %package progs
 Summary:	Audiofile programs
-Summary(es):	Audiofile programs
 Summary(pl):	Programy audiofile
 Summary(pt_BR):	Programas que acompanham a biblioteca audiofile
 Group:		Applications/Sound
 
 %description progs
 audiofile applications.
-
-%description progs -l es
-Audiofile programs.
 
 %description progs -l pl
 Programy audiofile.
@@ -121,7 +109,6 @@ audiofile.
 
 %package static
 Summary:	Static libaudiofile libraries
-Summary(es):	Static libraries for audiofile development
 Summary(pl):	Biblioteka statyczne libaudiofile
 Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com audiofile
 Summary(ru):	Статические библиотеки для разработки приложений с использованием audiofile
@@ -132,9 +119,6 @@ Obsoletes:	libaudiofile-static
 
 %description static
 Static libaudiofile libraries.
-
-%description static -l es
-Static libraries for audiofile development
 
 %description static -l pl
 Biblioteki statyczne libaudiofile.
@@ -154,22 +138,15 @@ audiofile.
 %setup -q
 
 %build
-rm -f missing
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
-%configure
+%configure \
+	--enable-largefile
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	m4datadir=%{_aclocaldir} \
-	pkgconfig=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -189,11 +166,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-
 %attr(755,root,root) %{_bindir}/audiofile-config
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
-
 %{_includedir}/*
 %{_aclocaldir}/audiofile.m4
 %{_pkgconfigdir}/*.pc
