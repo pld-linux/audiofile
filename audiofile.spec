@@ -2,29 +2,32 @@ Summary:	Audio File Library - SGI Audio File Library
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
 Name:		audiofile
 Version:	0.1.9
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/Sound
 Group(pl):	Aplikacje/D¼wiêk
-Source:		ftp://ftp.gnome.org/pub/GNOME/stable/sources/audiofile/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.gnome.org/pub/GNOME/stable/sources/audiofile/%{name}-%{version}.tar.gz
+Patch0:		audiofile-automake_fix.patch
 URL:		http://www.68k.org/~michael/audiofile/
+BUildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
 
 %description
-This Audio File Library is an implementation of the SGI Audio File library.
- Since the latter is specified ambiguously in places, I've taken some
-liberties in interpreting certain such ambiguities. At the present, not all
-features of the SGI Audio File library are implemented. I feel, though,
-that this implementation of the Audio File Library offers enough
-functionality to be useful for general tasks. This library allows the
-processing of audio data to and from audio files of many common formats
-(currently AIFF, AIFC, WAVE, and NeXT/Sun).
+This Audio File Library is an implementation of the SGI Audio File
+library. Since the latter is specified ambiguously in places, I've
+taken some liberties in interpreting certain such ambiguities. At the
+present, not all features of the SGI Audio File library are
+implemented. I feel, though, that this implementation of the Audio
+File Library offers enough functionality to be useful for general
+tasks. This library allows the processing of audio data to and from
+audio files of many common formats (currently AIFF, AIFC, WAVE, and
+NeXT/Sun).
 
 %description -l pl
-Biblioteka Audio File jest implementacj± biblioteki SGI Audio File. Przy
-jej pomocy mo¿na przetwarzaæ d¼wiêki w ró¿nych formatach (AIFF, AIFC, WAVE
-i NeXT/Sun).
+Biblioteka Audio File jest implementacj± biblioteki SGI Audio File.
+Przy jej pomocy mo¿na przetwarzaæ d¼wiêki w ró¿nych formatach (AIFF,
+AIFC, WAVE i NeXT/Sun).
 
 %package devel
 Summary:	Header files and others to develop Audio File applications
@@ -39,8 +42,8 @@ Obsoletes:	libaudiofile-devel
 Header files and others to develop Audio File applications.
 
 %description -l pl devel
-Pliki nag³ówków do Audio File'a, czyli to czego potrzebujesz do tworzenia
-aplikacji pod Audio File'm.
+Pliki nag³ówków do Audio File'a, czyli to czego potrzebujesz do
+tworzenia aplikacji pod Audio File'm.
 
 %package static
 Summary:	Static libaudiofile libraries
@@ -59,15 +62,19 @@ Biblioteki statyczne libaudiofile.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
+automake
 %configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make install DESTDIR=$RPM_BUILD_ROOT
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	m4datadir=%{_aclocaldir}
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 strip $RPM_BUILD_ROOT%{_bindir}/{sfconvert,sfinfo}
@@ -96,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/lib*.la
 
 %{_includedir}/*
-%{_datadir}/aclocal/audiofile.m4
+%{_aclocaldir}/audiofile.m4
 
 %files static
 %defattr(644,root,root,755)
