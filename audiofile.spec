@@ -62,8 +62,13 @@ Biblioteki statyczne libaudiofile.
 %build
 autoconf
 CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target} \
+<<<<<<< audiofile.spec
+./configure %{_target_platform} \
+	--prefix=/usr
+=======
+./configure %{_target_platform} \
 	--prefix=%{_prefix}
+>>>>>>> 1.13
 make
 
 %install
