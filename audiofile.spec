@@ -8,13 +8,6 @@ Release:	3
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	autoconf
@@ -64,8 +57,6 @@ Summary(es):	Audiofile programs
 Summary(pl):	Programy audiofile
 Summary(pt_BR):	Programas que acompanham a biblioteca audiofile
 Group:		Applications/Sound
-Group(de):	Applikationen/Laut
-Group(pl):	Aplikacje/D╪wiЙk
 
 %description progs
 audiofile applications.
@@ -85,13 +76,6 @@ Summary(es):	Bibliotecas, archivos de inclusiСn y otros archivos para el desarro
 Summary(pl):	Pliki nagЁСwkowe i inne potrzebe do Audio File
 Summary(pt_BR):	Bibliotecas, arquivos de inclusЦo e outros arquivos para desenvolver aplicativos audiofile
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 Obsoletes:	libaudiofile-devel
 Obsoletes:	libaudiofile0-devel
@@ -117,13 +101,6 @@ Summary(es):	Static libraries for audiofile development
 Summary(pl):	Biblioteka statyczne libaudiofile
 Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com audiofile
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 Obsoletes:	libaudiofile-static
 
