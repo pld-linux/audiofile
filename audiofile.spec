@@ -149,8 +149,9 @@ audiofile.
 %setup -q
 
 %build
+rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -164,8 +165,6 @@ rm -rf $RPM_BUILD_ROOT
 	m4datadir=%{_aclocaldir} \
 	pkgconfig=%{_pkgconfigdir}
 
-gzip -9nf NOTES README TODO
-
 %post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -174,7 +173,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {NOTES,README,TODO}.gz
+%doc NOTES README TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 
 %files progs
