@@ -93,7 +93,7 @@ Summary(pt_BR):	Bibliotecas, arquivos de inclusЦo e outros arquivos para desenvo
 Summary(ru):	Файлы для разработки приложений с использованием audiofile
 Summary(uk):	Файли для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{epoch}:%{version}
 Obsoletes:	libaudiofile-devel
 Obsoletes:	libaudiofile0-devel
 
@@ -127,7 +127,7 @@ Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com audiofile
 Summary(ru):	Статические библиотеки для разработки приложений с использованием audiofile
 Summary(uk):	Статичн╕ б╕бл╕отеки для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{epoch}:%{version}
 Obsoletes:	libaudiofile-static
 
 %description static
