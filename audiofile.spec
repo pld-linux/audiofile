@@ -1,3 +1,6 @@
+
+%define		snap		20021108
+
 Summary:	Audio File Library - SGI Audio File Library
 Summary(es):	Biblioteca para manipulaciСn de varios archivos de sonido
 Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
@@ -6,11 +9,12 @@ Summary(ru):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
 Version:	0.2.3
-Release:	4
+Release:	4.%{snap}
 Epoch:		1
 License:	LGPL
 Group:		Libraries
-Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
+#Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.%{snap}.tar.bz2
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -153,6 +157,7 @@ rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
