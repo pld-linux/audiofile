@@ -27,7 +27,7 @@ Biblioteka Audio File jest implementacj± biblioteki SGI Audio File.
 Przy jej pomocy mo¿na przetwarzaæ d¼wiêki w ró¿nych formatach (AIFF, AIFC,
 WAVE i NeXT/Sun).
 
-%package	devel
+%package devel
 Summary:	Header files and others to develop Audio File applications
 Summary(pl):	Pliki nag³ówkowe i inne potrzebe do Audio File
 Group:		Development/Libraries
@@ -42,7 +42,7 @@ Header files and others to develop Audio File applications.
 Pliki nag³ówków do Audio File'a, czyli to czego potrzebujesz do tworzenia
 aplikacji pod Audio File'm.
 
-%package	static
+%package static
 Summary:	Static libaudiofile libraries
 Summary(pl):	Biblioteka statyczne libaudiofile
 Group:		Development/Libraries
@@ -87,7 +87,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) /usr/bin/sfconvert
 %attr(755,root,root) /usr/bin/sfinfo
-%attr(755,root,root) /usr/lib/lib*.so.*
+%attr(755,root,root) /usr/lib/lib*.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
