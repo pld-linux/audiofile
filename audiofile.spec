@@ -51,7 +51,7 @@ Requires:	%{name}-devel = %{version}
 Obsoletes:	libaudiofile-static
 
 %description static
-Static libaudiofile libraries
+Static libaudiofile libraries.
 
 %description -l pl devel
 Biblioteki statyczne libaudiofile.
@@ -60,10 +60,7 @@ Biblioteki statyczne libaudiofile.
 %setup -q
 
 %build
-autoconf
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix}
+%configure
 make
 
 %install
@@ -72,6 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
+strip $RPM_BUILD_ROOT%{_bindir}/{sfconvert,sfinfo}
 
 gzip -9nf NOTES README TODO
 
