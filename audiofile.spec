@@ -99,7 +99,8 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/aclocal/audiofile.m4
 
 %files static
-%attr(644,root,root) /usr/lib/lib*.a
+%defattr(644,root,root,755)
+/usr/lib/lib*.a
 
 %changelog
 * Wed Apr 21 1999 Piotr Czerwiñski <pius@pld.org.pl>
