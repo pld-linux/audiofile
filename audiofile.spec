@@ -8,9 +8,7 @@ Group:		Applications/Sound
 Group(de):	Applikationen/Laut
 Group(pl):	Aplikacje/D¼wiêk
 Source0:	ftp://ftp.68k.org./pub/michael/%{name}-%{version}.tar.gz
-Patch0:		%{name}-automake_fix.patch
 URL:		http://www.68k.org/~michael/audiofile/
-BUildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
 
@@ -68,7 +66,6 @@ Biblioteki statyczne libaudiofile.
 %patch -p1
 
 %build
-automake
 %configure
 %{__make}
 
