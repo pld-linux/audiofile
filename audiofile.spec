@@ -6,7 +6,7 @@ Summary(ru):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
 Name:		audiofile
 Version:	0.2.6
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL
 Group:		Libraries
