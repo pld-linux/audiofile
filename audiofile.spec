@@ -1,9 +1,9 @@
 Summary:	Audio File Library - SGI Audio File Library
-Summary(es):	Biblioteca para manipulaciСn de varios archivos de sonido
-Summary(pl):	Biblioteka Audio File - implementacja SGI Audio File Library
-Summary(pt_BR):	Biblioteca para manipular vАrios formatos de arquivos de Аudio
-Summary(ru):	Библиотека работы с разными форматами аудио-файлов
-Summary(uk):	Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в
+Summary(es.UTF-8):   Biblioteca para manipulaciцЁn de varios archivos de sonido
+Summary(pl.UTF-8):   Biblioteka Audio File - implementacja SGI Audio File Library
+Summary(pt_BR.UTF-8):   Biblioteca para manipular vц║rios formatos de arquivos de ц║udio
+Summary(ru.UTF-8):   п▒п╦п╠п╩п╦п╬я┌п╣п╨п╟ я─п╟п╠п╬я┌я▀ я│ я─п╟п╥п╫я▀п╪п╦ я└п╬я─п╪п╟я┌п╟п╪п╦ п╟я┐п╢п╦п╬-я└п╟п╧п╩п╬п╡
+Summary(uk.UTF-8):   п▒я√п╠п╩я√п╬я┌п╣п╨п╟ я─п╬п╠п╬я┌п╦ п╥ я─я√п╥п╫п╦п╪п╦ я└п╬я─п╪п╟я┌п╟п╪п╦ п╟я┐п╢я√п╬-я└п╟п╧п╩я√п╡
 Name:		audiofile
 Version:	0.2.6
 Release:	4
@@ -31,58 +31,58 @@ tasks. This library allows the processing of audio data to and from
 audio files of many common formats (currently AIFF, AIFC, WAVE, and
 NeXT/Sun).
 
-%description -l es
-La Biblioteca de Archivos de Audio es una implementaciСn parcial de la
+%description -l es.UTF-8
+La Biblioteca de Archivos de Audio es una implementaciцЁn parcial de la
 biblioteca de Archivos de Audio SGI. Dicha biblioteca permite el
 procesado de datos de audio desde y para archivos de audio de los
-formatos mАs comunes (actualmente AIFF, AIFC, WAVE, y NeXT/Sun).
+formatos mц║s comunes (actualmente AIFF, AIFC, WAVE, y NeXT/Sun).
 
-Este software no estА completo y estА todavМa desarrollАndose. Muchos
+Este software no estц║ completo y estц║ todavц╜a desarrollц║ndose. Muchos
 formatos de archivo de sonido funcionan correctamente. Otros no tanto.
 
-%description -l pl
-Biblioteka Audio File jest implementacj╠ biblioteki SGI Audio File.
-Przy jej pomocy mo©na przetwarzaФ d╪wiЙki w rС©nych formatach (AIFF,
+%description -l pl.UTF-8
+Biblioteka Audio File jest implementacjд┘ biblioteki SGI Audio File.
+Przy jej pomocy moе╪na przetwarzaд┤ dе╨wiд≥ki w rцЁе╪nych formatach (AIFF,
 AIFC, WAVE i NeXT/Sun).
 
-%description -l pt_BR
-A biblioteca Audio File И uma implementaГЦo parcial da bibliotca Audio
-File da SGI. Ela provЙ processamento de dados de Аudio de e para
-vАrios formatos comuns (atualmente AIFF, AIFC, WAVE e NeXT/Sun).
+%description -l pt_BR.UTF-8
+A biblioteca Audio File ц╘ uma implementaц╖цёo parcial da bibliotca Audio
+File da SGI. Ela provц╙ processamento de dados de ц║udio de e para
+vц║rios formatos comuns (atualmente AIFF, AIFC, WAVE e NeXT/Sun).
 
-Este software nЦo estА completo e ainda estА em desenvolvimento.
-Muitos formatos funcionam bem, outros ainda nЦo.
+Este software nцёo estц║ completo e ainda estц║ em desenvolvimento.
+Muitos formatos funcionam bem, outros ainda nцёo.
 
-%description -l ru
-Библиотека работы с разными форматами фудио-файлов. Используется
-демоном esound.
+%description -l ru.UTF-8
+п▒п╦п╠п╩п╦п╬я┌п╣п╨п╟ я─п╟п╠п╬я┌я▀ я│ я─п╟п╥п╫я▀п╪п╦ я└п╬я─п╪п╟я┌п╟п╪п╦ я└я┐п╢п╦п╬-я└п╟п╧п╩п╬п╡. п≤я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐
+п╢п╣п╪п╬п╫п╬п╪ esound.
 
-%description -l uk
-Б╕бл╕отека роботи з р╕зними форматами ауд╕о-файл╕в. Використову╓ться
-демоном esound.
+%description -l uk.UTF-8
+п▒я√п╠п╩я√п╬я┌п╣п╨п╟ я─п╬п╠п╬я┌п╦ п╥ я─я√п╥п╫п╦п╪п╦ я└п╬я─п╪п╟я┌п╟п╪п╦ п╟я┐п╢я√п╬-я└п╟п╧п╩я√п╡. п▓п╦п╨п╬я─п╦я│я┌п╬п╡я┐я■я┌я▄я│я▐
+п╢п╣п╪п╬п╫п╬п╪ esound.
 
 %package progs
 Summary:	Audiofile programs
-Summary(pl):	Programy audiofile
-Summary(pt_BR):	Programas que acompanham a biblioteca audiofile
+Summary(pl.UTF-8):   Programy audiofile
+Summary(pt_BR.UTF-8):   Programas que acompanham a biblioteca audiofile
 Group:		Applications/Sound
 
 %description progs
 audiofile applications.
 
-%description progs -l pl
+%description progs -l pl.UTF-8
 Programy audiofile.
 
-%description progs -l pt_BR
+%description progs -l pt_BR.UTF-8
 Programas que acompanham a audiofile.
 
 %package devel
 Summary:	Header and other files to develop Audio File applications
-Summary(es):	Archivos de inclusiСn y otros archivos para el desarrollo de aplicaciones audiofile
-Summary(pl):	Pliki nagЁСwkowe i inne potrzebe do Audio File
-Summary(pt_BR):	Arquivos de inclusЦo e outros arquivos para desenvolver aplicativos audiofile
-Summary(ru):	Файлы для разработки приложений с использованием audiofile
-Summary(uk):	Файли для розробки прикладних програм з використанням audiofile
+Summary(es.UTF-8):   Archivos de inclusiцЁn y otros archivos para el desarrollo de aplicaciones audiofile
+Summary(pl.UTF-8):   Pliki nagе┌цЁwkowe i inne potrzebe do Audio File
+Summary(pt_BR.UTF-8):   Arquivos de inclusцёo e outros arquivos para desenvolver aplicativos audiofile
+Summary(ru.UTF-8):   п╓п╟п╧п╩я▀ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ п©я─п╦п╩п╬п╤п╣п╫п╦п╧ я│ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣п╪ audiofile
+Summary(uk.UTF-8):   п╓п╟п╧п╩п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п©я─п╦п╨п╩п╟п╢п╫п╦я┘ п©я─п╬пЁя─п╟п╪ п╥ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐п╪ audiofile
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libaudiofile-devel
@@ -91,31 +91,31 @@ Obsoletes:	libaudiofile0-devel
 %description devel
 Header and other files to develop Audio File applications.
 
-%description devel -l pl
-Pliki nagЁСwkowe biblioteki Audio File, czyli to, co jest potrzebne do
-tworzenia aplikacji korzystaj╠cych z tej biblioteki.
+%description devel -l pl.UTF-8
+Pliki nagе┌цЁwkowe biblioteki Audio File, czyli to, co jest potrzebne do
+tworzenia aplikacji korzystajд┘cych z tej biblioteki.
 
-%description devel -l es
-Archivos de inclusiСn y otros archivos para el desarrollo de
+%description devel -l es.UTF-8
+Archivos de inclusiцЁn y otros archivos para el desarrollo de
 aplicaciones audiofile.
 
-%description devel -l pt_BR
-Arquivos de inclusЦo e outros arquivos para desenvolver aplicativos
+%description devel -l pt_BR.UTF-8
+Arquivos de inclusцёo e outros arquivos para desenvolver aplicativos
 audiofile.
 
-%description devel -l ru
-.h-файлы и пр. для разработки приложений с использованием audiofile.
+%description devel -l ru.UTF-8
+.h-я└п╟п╧п╩я▀ п╦ п©я─. п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ п©я─п╦п╩п╬п╤п╣п╫п╦п╧ я│ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣п╪ audiofile.
 
-%description devel -l uk
-.h-файли та ╕нше для розробки прикладних програм з використанням
+%description devel -l uk.UTF-8
+.h-я└п╟п╧п╩п╦ я┌п╟ я√п╫я┬п╣ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п©я─п╦п╨п╩п╟п╢п╫п╦я┘ п©я─п╬пЁя─п╟п╪ п╥ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐п╪
 audiofile.
 
 %package static
 Summary:	Static libaudiofile libraries
-Summary(pl):	Biblioteka statyczne libaudiofile
-Summary(pt_BR):	Bibliotecas estАticas para desenvolvimento com audiofile
-Summary(ru):	Статические библиотеки для разработки приложений с использованием audiofile
-Summary(uk):	Статичн╕ б╕бл╕отеки для розробки прикладних програм з використанням audiofile
+Summary(pl.UTF-8):   Biblioteka statyczne libaudiofile
+Summary(pt_BR.UTF-8):   Bibliotecas estц║ticas para desenvolvimento com audiofile
+Summary(ru.UTF-8):   п║я┌п╟я┌п╦я┤п╣я│п╨п╦п╣ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ п©я─п╦п╩п╬п╤п╣п╫п╦п╧ я│ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣п╪ audiofile
+Summary(uk.UTF-8):   п║я┌п╟я┌п╦я┤п╫я√ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п©я─п╦п╨п╩п╟п╢п╫п╦я┘ п©я─п╬пЁя─п╟п╪ п╥ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐п╪ audiofile
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	libaudiofile-static
@@ -123,18 +123,18 @@ Obsoletes:	libaudiofile-static
 %description static
 Static libaudiofile libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne libaudiofile.
 
-%description static -l pt_BR
-Bibliotecas estАticas para desenvolvimento com audiofile
+%description static -l pt_BR.UTF-8
+Bibliotecas estц║ticas para desenvolvimento com audiofile
 
-%description static -l ru
-Статические библиотеки для разработки приложений с использованием
+%description static -l ru.UTF-8
+п║я┌п╟я┌п╦я┤п╣я│п╨п╦п╣ п╠п╦п╠п╩п╦п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╟п╥я─п╟п╠п╬я┌п╨п╦ п©я─п╦п╩п╬п╤п╣п╫п╦п╧ я│ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣п╪
 audiofile.
 
-%description static -l uk
-Статичн╕ б╕бл╕отеки для розробки прикладних програм з використанням
+%description static -l uk.UTF-8
+п║я┌п╟я┌п╦я┤п╫я√ п╠я√п╠п╩я√п╬я┌п╣п╨п╦ п╢п╩я▐ я─п╬п╥я─п╬п╠п╨п╦ п©я─п╦п╨п╩п╟п╢п╫п╦я┘ п©я─п╬пЁя─п╟п╪ п╥ п╡п╦п╨п╬я─п╦я│я┌п╟п╫п╫я▐п╪
 audiofile.
 
 %prep
