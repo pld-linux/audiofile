@@ -1,9 +1,9 @@
 Summary:	Audio File Library - SGI Audio File Library
-Summary(es.UTF-8):   Biblioteca para manipulación de varios archivos de sonido
-Summary(pl.UTF-8):   Biblioteka Audio File - implementacja SGI Audio File Library
-Summary(pt_BR.UTF-8):   Biblioteca para manipular vários formatos de arquivos de áudio
-Summary(ru.UTF-8):   Библиотека работы с разными форматами аудио-файлов
-Summary(uk.UTF-8):   Бібліотека роботи з різними форматами аудіо-файлів
+Summary(es.UTF-8):	Biblioteca para manipulación de varios archivos de sonido
+Summary(pl.UTF-8):	Biblioteka Audio File - implementacja SGI Audio File Library
+Summary(pt_BR.UTF-8):	Biblioteca para manipular vários formatos de arquivos de áudio
+Summary(ru.UTF-8):	Библиотека работы с разными форматами аудио-файлов
+Summary(uk.UTF-8):	Бібліотека роботи з різними форматами аудіо-файлів
 Name:		audiofile
 Version:	0.2.6
 Release:	4
@@ -63,8 +63,8 @@ Muitos formatos funcionam bem, outros ainda não.
 
 %package progs
 Summary:	Audiofile programs
-Summary(pl.UTF-8):   Programy audiofile
-Summary(pt_BR.UTF-8):   Programas que acompanham a biblioteca audiofile
+Summary(pl.UTF-8):	Programy audiofile
+Summary(pt_BR.UTF-8):	Programas que acompanham a biblioteca audiofile
 Group:		Applications/Sound
 
 %description progs
@@ -78,11 +78,11 @@ Programas que acompanham a audiofile.
 
 %package devel
 Summary:	Header and other files to develop Audio File applications
-Summary(es.UTF-8):   Archivos de inclusión y otros archivos para el desarrollo de aplicaciones audiofile
-Summary(pl.UTF-8):   Pliki nagłówkowe i inne potrzebe do Audio File
-Summary(pt_BR.UTF-8):   Arquivos de inclusão e outros arquivos para desenvolver aplicativos audiofile
-Summary(ru.UTF-8):   Файлы для разработки приложений с использованием audiofile
-Summary(uk.UTF-8):   Файли для розробки прикладних програм з використанням audiofile
+Summary(es.UTF-8):	Archivos de inclusión y otros archivos para el desarrollo de aplicaciones audiofile
+Summary(pl.UTF-8):	Pliki nagłówkowe i inne potrzebe do Audio File
+Summary(pt_BR.UTF-8):	Arquivos de inclusão e outros arquivos para desenvolver aplicativos audiofile
+Summary(ru.UTF-8):	Файлы для разработки приложений с использованием audiofile
+Summary(uk.UTF-8):	Файли для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 Obsoletes:	libaudiofile-devel
@@ -112,10 +112,10 @@ audiofile.
 
 %package static
 Summary:	Static libaudiofile libraries
-Summary(pl.UTF-8):   Biblioteka statyczne libaudiofile
-Summary(pt_BR.UTF-8):   Bibliotecas estáticas para desenvolvimento com audiofile
-Summary(ru.UTF-8):   Статические библиотеки для разработки приложений с использованием audiofile
-Summary(uk.UTF-8):   Статичні бібліотеки для розробки прикладних програм з використанням audiofile
+Summary(pl.UTF-8):	Biblioteka statyczne libaudiofile
+Summary(pt_BR.UTF-8):	Bibliotecas estáticas para desenvolvimento com audiofile
+Summary(ru.UTF-8):	Статические библиотеки для разработки приложений с использованием audiofile
+Summary(uk.UTF-8):	Статичні бібліотеки для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{epoch}:%{version}-%{release}
 Obsoletes:	libaudiofile-static
