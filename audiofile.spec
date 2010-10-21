@@ -8,15 +8,15 @@ Name:		audiofile
 Version:	0.2.7
 Release:	1
 Epoch:		1
-License:	LGPL
+License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.2/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.2/%{name}-%{version}.tar.bz2
 # Source0-md5:	73de23c021ed5921ae77e45455a7a23b
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	automake
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This Audio File Library is an implementation of the SGI Audio File
@@ -63,7 +63,9 @@ Muitos formatos funcionam bem, outros ainda não.
 Summary:	Audiofile programs
 Summary(pl.UTF-8):	Programy audiofile
 Summary(pt_BR.UTF-8):	Programas que acompanham a biblioteca audiofile
+License:	GPL v2+
 Group:		Applications/Sound
+Requires:	%{name} = %{epoch}:%{version}-%{release}
 
 %description progs
 audiofile applications.
@@ -139,7 +141,7 @@ audiofile.
 %setup -q
 
 %build
-cp /usr/share/automake/config.sub .
+cp -f /usr/share/automake/config.sub .
 %configure \
 	--enable-largefile
 %{__make}
@@ -158,8 +160,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NOTES README TODO
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%doc ACKNOWLEDGEMENTS AUTHORS ChangeLog NEWS NOTES README TODO
+%attr(755,root,root) %{_libdir}/libaudiofile.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libaudiofile.so.0
 
 %files progs
 %defattr(644,root,root,755)
@@ -169,12 +172,14 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/audiofile-config
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/*
+%attr(755,root,root) %{_libdir}/libaudiofile.so
+%{_libdir}/libaudiofile.la
+%{_includedir}/af_vfs.h
+%{_includedir}/audiofile.h
+%{_includedir}/aupvlist.h
 %{_aclocaldir}/audiofile.m4
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/audiofile.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libaudiofile.a
