@@ -18,6 +18,8 @@ Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%undefine	__cxx
+
 %description
 This Audio File Library is an implementation of the SGI Audio File
 library. Since the latter is specified ambiguously in places, I've
