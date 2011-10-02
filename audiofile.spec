@@ -5,13 +5,14 @@ Summary(pt_BR.UTF-8):	Biblioteca para manipular vários formatos de arquivos de 
 Summary(ru.UTF-8):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk.UTF-8):	Бібліотека роботи з різними форматами аудіо-файлів
 Name:		audiofile
-Version:	0.2.7
+Version:	0.3.1
 Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.2/%{name}-%{version}.tar.bz2
-# Source0-md5:	73de23c021ed5921ae77e45455a7a23b
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.3/%{name}-%{version}.tar.xz
+# Source0-md5:	a83fa88a9711543db89ee0e0af109484
+Patch0:		libm.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	automake
 Obsoletes:	libaudiofile
@@ -19,6 +20,7 @@ Obsoletes:	libaudiofile0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %undefine	__cxx
+%define		specflags -Wno-unused-but-set-variable
 
 %description
 This Audio File Library is an implementation of the SGI Audio File
@@ -141,9 +143,14 @@ audiofile.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-cp -f /usr/share/automake/config.sub .
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	--enable-largefile
 %{__make}
@@ -170,17 +177,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/sfconvert
 %attr(755,root,root) %{_bindir}/sfinfo
+%{_mandir}/man1/*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/audiofile-config
 %attr(755,root,root) %{_libdir}/libaudiofile.so
 %{_libdir}/libaudiofile.la
 %{_includedir}/af_vfs.h
 %{_includedir}/audiofile.h
 %{_includedir}/aupvlist.h
-%{_aclocaldir}/audiofile.m4
 %{_pkgconfigdir}/audiofile.pc
+%{_mandir}/man3/*
 
 %files static
 %defattr(644,root,root,755)
