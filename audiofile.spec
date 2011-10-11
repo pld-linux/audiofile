@@ -14,12 +14,14 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.3/%{name}-%{version}
 # Source0-md5:	a83fa88a9711543db89ee0e0af109484
 Patch0:		libm.patch
 URL:		http://www.68k.org/~michael/audiofile/
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	libstdc++-devel
+BuildRequires:	libtool >= 2:1.5
 Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%undefine	__cxx
 %define		specflags -Wno-unused-but-set-variable
 
 %description
@@ -89,6 +91,7 @@ Summary(ru.UTF-8):	Файлы для разработки приложений �
 Summary(uk.UTF-8):	Файли для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+Requires:	libstdc++-devel
 Obsoletes:	libaudiofile-devel
 Obsoletes:	libaudiofile0-devel
 
@@ -177,7 +180,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/sfconvert
 %attr(755,root,root) %{_bindir}/sfinfo
-%{_mandir}/man1/*
+%{_mandir}/man1/sfconvert.1*
+%{_mandir}/man1/sfinfo.1*
 
 %files devel
 %defattr(644,root,root,755)
@@ -187,7 +191,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/audiofile.h
 %{_includedir}/aupvlist.h
 %{_pkgconfigdir}/audiofile.pc
-%{_mandir}/man3/*
+%{_mandir}/man3/af*.3*
 
 %files static
 %defattr(644,root,root,755)
