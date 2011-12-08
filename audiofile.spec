@@ -5,19 +5,21 @@ Summary(pt_BR.UTF-8):	Biblioteca para manipular vários formatos de arquivos de 
 Summary(ru.UTF-8):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk.UTF-8):	Бібліотека роботи з різними форматами аудіо-файлів
 Name:		audiofile
-Version:	0.3.1
+Version:	0.3.2
 Release:	1
 Epoch:		1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.3/%{name}-%{version}.tar.xz
-# Source0-md5:	a83fa88a9711543db89ee0e0af109484
+# Source0-md5:	5d859329ba1ad09e22a12b8f8fdfb81c
 Patch0:		libm.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
