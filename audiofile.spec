@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	flac	# FLAC files support
+#
 Summary:	Audio File Library - SGI Audio File Library
 Summary(es.UTF-8):	Biblioteca para manipulación de varios archivos de sonido
 Summary(pl.UTF-8):	Biblioteka Audio File - implementacja SGI Audio File Library
@@ -5,22 +9,24 @@ Summary(pt_BR.UTF-8):	Biblioteca para manipular vários formatos de arquivos de 
 Summary(ru.UTF-8):	Библиотека работы с разными форматами аудио-файлов
 Summary(uk.UTF-8):	Бібліотека роботи з різними форматами аудіо-файлів
 Name:		audiofile
-Version:	0.3.5
+Version:	0.3.6
 Release:	1
 Epoch:		1
-License:	LGPL v2+
+License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.3/%{name}-%{version}.tar.xz
-# Source0-md5:	7bc9e16dd1764a6bea2bea458d9b8d4c
+# Source0-md5:	235dde14742317328f0109e9866a8008
 Patch0:		libm.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	asciidoc
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+%{?with_flac:BuildRequires:	flac-devel >= 1.2.1}
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
+%{?with_flac:Requires:	flac >= 1.2.1}
 Obsoletes:	libaudiofile
 Obsoletes:	libaudiofile0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -94,6 +100,7 @@ Summary(ru.UTF-8):	Файлы для разработки приложений �
 Summary(uk.UTF-8):	Файли для розробки прикладних програм з використанням audiofile
 Group:		Development/Libraries
 Requires:	%{name} = %{epoch}:%{version}-%{release}
+%{?with_flac:Requires:	flac-devel >= 1.2.1}
 Requires:	libstdc++-devel
 Obsoletes:	libaudiofile-devel
 Obsoletes:	libaudiofile0-devel
@@ -158,6 +165,7 @@ audiofile.
 %{__autoheader}
 %{__automake}
 %configure \
+	%{!?with_flac:--disable-flac} \
 	--enable-largefile
 %{__make}
 
