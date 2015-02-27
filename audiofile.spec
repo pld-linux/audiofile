@@ -10,7 +10,7 @@ Summary(ru.UTF-8):	Библиотека работы с разными форм�
 Summary(uk.UTF-8):	Бібліотека роботи з різними форматами аудіо-файлів
 Name:		audiofile
 Version:	0.3.6
-Release:	1
+Release:	2
 Epoch:		1
 License:	LGPL v2.1+
 Group:		Libraries
