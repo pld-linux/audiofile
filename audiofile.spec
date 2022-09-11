@@ -16,8 +16,7 @@ License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.3/%{name}-%{version}.tar.xz
 # Source0-md5:	235dde14742317328f0109e9866a8008
-Patch0:		libm.patch
-Patch1:		gcc6.patch
+Patch0:		gcc6.patch
 URL:		http://www.68k.org/~michael/audiofile/
 BuildRequires:	asciidoc
 BuildRequires:	autoconf >= 2.50
@@ -158,7 +157,6 @@ audiofile.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
