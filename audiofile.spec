@@ -19,6 +19,8 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/audiofile/0.3/%{name}-%{version}
 # Source0-md5:	235dde14742317328f0109e9866a8008
 Patch0:		gcc6.patch
 URL:		http://www.68k.org/~michael/audiofile/
+# only for alsaplay example
+BuildRequires:	alsa-lib-devel
 BuildRequires:	asciidoc
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
