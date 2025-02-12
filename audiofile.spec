@@ -1,6 +1,7 @@
 #
 # Conditional build:
-%bcond_without	flac	# FLAC files support
+%bcond_without	flac		# FLAC files support
+%bcond_without	static_libs	# static library
 #
 Summary:	Audio File Library - SGI Audio File Library
 Summary(es.UTF-8):	Biblioteca para manipulación de varios archivos de sonido
@@ -24,6 +25,7 @@ BuildRequires:	automake
 %{?with_flac:BuildRequires:	flac-devel >= 1.2.1}
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.5
+BuildRequires:	rpmbuild(macros) >= 1.527
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 %{?with_flac:Requires:	flac >= 1.2.1}
@@ -165,6 +167,7 @@ audiofile.
 %{__autoheader}
 %{__automake}
 %configure \
+	%{__enable_disable static_libs static} \
 	%{!?with_flac:--disable-flac} \
 	--enable-largefile
 %{__make}
@@ -204,6 +207,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_pkgconfigdir}/audiofile.pc
 %{_mandir}/man3/af*.3*
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libaudiofile.a
+%endif
